@@ -1,0 +1,16 @@
+
+services:
+  - type: web
+    name: binance-auto-trader
+    env: python
+    repo: https://github.com/Mazan958/Binance_bot
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: BINANCE_API_KEY
+        value: your_binance_api_key_here
+      - key: BINANCE_SECRET_KEY
+        value: your_binance_secret_key_here
+      - key: WEBHOOK_PASSPHRASE
+        value: your_webhook_password_here
